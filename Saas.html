@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APE - Softwares Personalizados</title>
+    <meta name="description" content="Desbloqueie sua carreira tech com um portfólio profissional e orientação personalizada. Ajudo iniciantes e experientes a se destacarem no mercado de Análise e Ciência de Dados.">
+    <meta name="keywords" content="portfólio, carreira tech, análise de dados, ciência de dados, iniciante, mentor, html, css, javascript, desenvolvimento web, linkedin, github, currículo, vagas tech">
+
+    <link rel="stylesheet" href="Saas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Imagens/FAVICON_NOVO_APE.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="floating-nav">
+            <div class="navbar-container">
+                <a href="#hero" class="navbar-logo-link">
+                    <img src="Imagens/logoprata-removebg-preview.png" alt="Logo da Empresa" class="navbar-logo">
+                </a>
+                <ul class="nav-list">
+                    <span class="nav-highlight" aria-hidden="true"></span>
+                    <li class="nav-item">
+                        <a href="#ecosystem" class="nav-link" data-section="ecosystem">
+                            <i class="fa-solid fa-cloud"></i><span class="link-text">Ambiente SaaS</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#recursos" class="nav-link" data-section="recursos">
+                            <i class="fa-solid fa-rocket"></i><span class="link-text">Nossos Recursos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="solucoes">
+                            <i class="fa-solid fa-lightbulb"></i><span class="link-text">Soluções</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#faq" class="nav-link" data-section="faq"><i class="fa-solid fa-circle-question"></i><span class="link-text">FAQ</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link btn-cta" data-section="contato">
+                            <i class="fa-solid fa-envelope"></i><span class="link-text">Contato</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="new-hero-section">
+            <div class="new-hero-content">
+                <div class="hero-chip">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.5 0L8.58579 6.41421L15 7.5L8.58579 8.58579L7.5 15L6.41421 8.58579L0 7.5L6.41421 6.41421L7.5 0Z" fill="url(#paint0_linear_1_2)"></path>
+                        <defs>
+                            <linearGradient id="paint0_linear_1_2" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#A5B4FC"></stop>
+                                <stop offset="1" stop-color="#6366F1"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>Transforme seu negócio com IA</span>
+                </div>
+                <h1>Potencialize seu negócio com <span class="highlight-blue">Automação Inteligente</span></h1>
+                <p class="hero-subtitle">Automatize processos, escale seu negócio e conquiste resultados extraordinários com nossas soluções.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary-new">Começar Gratuitamente &rarr;</a>
+                    <a href="#" class="btn-secondary-new">Ver Demonstração</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ecosystem" class="ecosystem-section">
+            <div class="ecosystem-intro-text">
+                <h1>Construa um ambiente completo com SaaS!</h1>
+                <p>Toque nos ícones e veja como cada solução se conecta à nuvem.</p>
+            </div>
+            <div class="progress-counter">0 de 5 áreas conectadas</div>
+            <div class="ecosystem-container">
+                <div class="cloud-icon-node">
+                    <i class="fa-solid fa-cloud"></i>
+                </div>
+                <svg class="connection-lines" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <filter id="yellow-glow">
+                            <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#ffc107" flood-opacity="0.7" />
+                        </filter>
+                    </defs>
+                    <path id="line-gestao" d="M 140 220 C 140 280, 250 320, 390 295" />
+                    <path id="line-financas" d="M 220 500 C 300 500, 350 420, 390 315" />
+                    <path id="line-marketing" d="M 580 500 C 500 500, 450 420, 410 315" />
+                    <path id="line-educacao" d="M 660 220 C 660 280, 550 320, 410 295" />
+                    <path id="line-niche" d="M 400 80 C 400 130, 400 230, 400 280" />
+                </svg>
+                <div class="service-node" id="node-gestao" data-target="gestao"><i class="fa-solid fa-gears"></i></div>
+                <div class="service-node" id="node-financas" data-target="financas"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <div class="service-node" id="node-marketing" data-target="marketing"><i class="fa-solid fa-bullhorn"></i></div>
+                <div class="service-node" id="node-niche" data-target="niche"><i class="fa-solid fa-puzzle-piece"></i></div>
+                <div class="service-node" id="node-educacao" data-target="educacao"><i class="fa-solid fa-book-open-reader"></i></div>
+                <div class="energy-burst"></div>
+            </div>
+            <div id="card-gestao" class="info-card">
+                <button class="close-btn">&times;</button>
+                <h2><i class="fa-solid fa-gears"></i> Gestão e Produtividade</h2>
+                <p>Otimize processos, melhore a colaboração e aumente a eficiência da sua equipe com ferramentas projetadas para o sucesso.</p>
+                <span>Exemplos: Asana, Trello, Slack.</span>
+            </div>
+            <div id="card-financas" class="info-card">
+                <button class="close-btn">&times;</button>
+                <h2><i class="fa-solid fa-hand-holding-dollar"></i> Finanças e Negócios</h2>
+                <p>Controle suas finanças, gerencie faturamento e obtenha insights valiosos para a tomada de decisões estratégicas.</p>
+                <span>Exemplos: QuickBooks, ContaAzul, Stripe.</span>
+            </div>
+            <div id="card-marketing" class="info-card">
+                <button class="close-btn">&times;</button>
+                <h2><i class="fa-solid fa-bullhorn"></i> Marketing e Vendas</h2>
+                <p>Automatize campanhas, gerencie o relacionamento com clientes (CRM) e impulsione suas vendas com as melhores plataformas do mercado.</p>
+                <span>Exemplos: HubSpot, Salesforce, RD Station.</span>
+            </div>
+            <div id="card-educacao" class="info-card">
+                <button class="close-btn">&times;</button>
+                <h2><i class="fa-solid fa-book-open-reader"></i> Educação e Conteúdo</h2>
+                <p>Crie, gerencie e distribua conteúdo educacional através de plataformas EAD robustas e intuitivas.</p>
+                <span>Exemplos: Hotmart, Moodle, Udemy.</span>
+            </div>
+            <div id="card-niche" class="info-card">
+                <button class="close-btn">&times;</button>
+                <h2><i class="fa-solid fa-puzzle-piece"></i> Niche SaaS</h2>
+                <p>Soluções altamente especializadas, desenvolvidas para atender às demandas únicas de mercados específicos com precisão.</p>
+                <span>Exemplos: Software para academias, gestão de escritórios de advocacia.</span>
+            </div>
+            <div id="overlay"></div>
+        </section>
+
+        <section id="recursos" class="features-section">
+            <div class="features-content">
+                <h2 class="section-title">Recursos de <span class="highlight-blue">Crescimento e Automação</span></h2>
+                <p class="section-subtitle">Tudo que você precisa para construir, escalar e gerenciar aplicações modernas</p>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h3>Automação Inteligente</h3>
+                        <p>Reduza tarefas manuais com fluxos automatizados e gatilhos inteligentes baseados em IA.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3>Escalabilidade Sob Demanda</h3>
+                        <p>Aumente recursos conforme o uso — sem interrupções, sem complexidade.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3>Relatórios e Insights</h3>
+                        <p>Visualize dados e resultados com dashboards personalizados e relatórios dinâmicos.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="card-icon"><i class="fa-solid fa-users-gear"></i></div>
+                        <h3>Multiusuário e Permissões</h3>
+                        <p>Controle o acesso da sua equipe com diferentes níveis de permissão e perfis de uso.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="contact-header">
+                <h2 class="section-title">Deseja impulsionar seus resultados com <span class="highlight-blue">Inovação?</span></h2>
+                <div class="title-decorator"></div>
+                <p class="section-subtitle">Preencha o formulário abaixo e fale com nossa equipe. Estamos prontos para entender suas necessidades e mostrar como nossas soluções podem levar sua empresa a um novo patamar de eficiência e inovação.</p>
+            </div>
+            <div class="contact-box">
+                <div class="contact-channels">
+                    <h3>Canais Rápidos</h3>
+                    <p>Prefere uma conversa mais ágil? Nos envie uma mensagem.</p>
+                    <ul class="channel-list">
+                        <li><a href="https://wa.me/SEUNUMERO" target="_blank"><i class="fa-brands fa-whatsapp"></i><span>Nosso WhatsApp</span></a></li>
+                        <li><a href="mailto:gerencia.apetech@gmail.com"><i class="fa-solid fa-envelope"></i><span>gerencia.apetech@gmail.com</span></a></li>
+                        <li><a href="https://linkedin.com/in/SEU-PERFIL" target="_blank"><i class="fa-brands fa-linkedin"></i><span>Siga-nos no LinkedIn</span></a></li>
+                    </ul>
+                    <a href="#nossas-solucoes" class="solutions-link">Conheça nossas outras soluções &rarr;</a>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3>Envie sua Mensagem</h3>
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Seu Nome" required>
+                            <input type="text" name="company" placeholder="Nome da Empresa">
+                        </div>
+                        <input type="email" name="email" placeholder="Seu E-mail Profissional" required>
+                        <textarea name="message" rows="5" placeholder="Conte-nos um pouco sobre seu desafio..." required></textarea>
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="achievement-message" class="achievement-message">
+        <div class="message-content">
+            <div class="message-header">
+                <i class="fas fa-check-circle message-icon"></i>
+                <div>
+                    <span class="message-title">🎉 Parabéns! Você desbloqueou todos os recursos!</span>
+                    <p class="message-subtitle">Descubra o poder completo da nossa plataforma!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="Saas.js"></script>
+</body>
+</html>

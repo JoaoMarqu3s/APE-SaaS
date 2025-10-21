@@ -476,7 +476,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
         1488px 439px #FFF, 1158px 133px #FFF, 1261px 1045px #FFF, 1259px 1335px #FFF, 
         /* ... e muitas outras estrelas geradas aleatoriamente ... */
         539px 1192px #FFF, 1154px 1113px #FFF, 140px 1832px #FFF, 1000px 1000px #FFF;
-    animation: animStar 150s linear infinite;
+    animation: animStar 70s linear infinite;
     position: absolute;
     top: 0;
     left: 0;
@@ -503,7 +503,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
         1007px 1445px #FFF, 24px 1729px #FFF, 413px 456px #FFF, 1131px 1863px #FFF, 
         /* ... etc ... */
         1984px 132px #FFF, 1782px 1183px #FFF, 1511px 1134px #FFF, 838px 1137px #FFF;
-    animation: animStar 100s linear infinite;
+    animation: animStar 50s linear infinite;
     position: absolute;
     top: 0;
     left: 0;
@@ -530,7 +530,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
         108px 1529px #FFF, 1969px 1383px #FFF, 1084px 81px #FFF, 1033px 1461px #FFF, 
         /* ... etc ... */
         1438px 1413px #FFF, 1189px 422px #FFF, 1073px 1785px #FFF;
-    animation: animStar 50s linear infinite;
+    animation: animStar 14s linear infinite;
     position: absolute;
     top: 0;
     left: 0;

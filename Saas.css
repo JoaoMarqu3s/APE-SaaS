@@ -226,7 +226,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px 20px 20px;
+    padding: 70px 20px 20px 20px;
     overflow: hidden;
     background-color: #161b22;
 }
@@ -275,8 +275,8 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px; /* Base size, 2.5x the 80px nodes */
-    height: 200px; /* Base size */
+    width: 180px; /* Base size, 2.5x the 80px nodes */
+    height: 180px; /* Base size */
     background-color: var(--white);
     border-radius: 50%;
     display: grid;
@@ -287,7 +287,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 }
 
 .cloud-icon-node i {
-    font-size: 90px; /* Ícone da nuvem, ajustado para ser visível no novo tamanho */
+    font-size: 80px; /* Ícone da nuvem, ajustado para ser visível no novo tamanho */
     color: var(--primary-blue);
 }
 
@@ -303,8 +303,8 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 }
 .service-node {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     background-color: var(--white);
     border-radius: 50%;
     display: grid;
@@ -315,7 +315,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .service-node:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5); }
-.service-node i { font-size: 36px; color: #6366F1; }
+.service-node i { font-size: 40px; color: #6366F1; }
 
 /* Posicionamento dos nós */
 #node-niche { top: 40px; left: 360px; }
@@ -328,12 +328,98 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 .connection-lines path { fill: none; stroke: var(--white); stroke-width: 2; stroke-linecap: round; transition: stroke-dashoffset 1s ease-in-out, stroke 0.5s ease, filter 0.5s ease; }
 .connection-lines path.connected { stroke: #ffc107; filter: url(#yellow-glow); }
 
-.info-card { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 500px; background-color: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); z-index: 11; text-align: center; opacity: 0; pointer-events: none; transition: opacity 0.5s ease, transform 0.5s ease; }
-.info-card.visible { opacity: 1; pointer-events: auto; }
-.info-card h2 { font-family: var(--font-heading); color: var(--slate-800); margin: 0; }
-.info-card p, .info-card span { font-family: var(--font-body); color: var(--slate-800); }
-.close-btn { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 2.5rem; color: #aaa; cursor: pointer; transition: color 0.3s ease; }
-.close-btn:hover { color: #333; }
+.info-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    
+    width: 100%;
+    max-width: 540px; /* Um pouco mais compacto para elegância */
+    
+    /* Fundo escuro com efeito 'frosted glass' */
+    background-color: rgba(30, 41, 59, 0.7); /* Cor --slate-800 com transparência */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Borda fina e clara, como sugerido */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    border-radius: 16px; /* Bordas mais suaves */
+    padding: 2rem; /* Espaçamento interno (32px) */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    
+    z-index: 11;
+    text-align: center;
+    
+    /* Animação de surgimento */
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.info-card.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+.info-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem; /* 24px */
+    font-weight: 600;
+    color: var(--white);
+    
+    /* Alinha o ícone e o texto do título */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem; /* 12px */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+}
+
+.info-card h2 i {
+    color: var(--primary-blue); /* Mantém o ícone com a cor de destaque */
+}
+
+.info-card p {
+    font-family: var(--font-body);
+    color: var(--slate-300); /* Cor mais suave para o texto principal */
+    line-height: 1.7;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem; /* Espaço abaixo do parágrafo */
+}
+
+.info-card span {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--slate-400); /* Cor ainda mais suave para os exemplos */
+    font-style: italic;
+}
+
+/* Botão de fechar redesenhado */
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: var(--slate-300);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
 #overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 59, 92, 0.6); z-index: 10; opacity: 0; pointer-events: none; transition: opacity 0.5s ease; }
 #overlay.visible { opacity: 1; pointer-events: auto; }
 
@@ -442,9 +528,26 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     .ecosystem-section { padding-top: 20px; }
 }
 @media (max-width: 600px) {
-    .ecosystem-container { transform: scale(0.65); }
-    .ecosystem-intro-text h1 { font-size: 1.3rem; }
+    .ecosystem-section { min-height: 400px; padding-top: 60px;}
+    .energy-burst{
+        width: 60px;
+        height: 60px;
+    }
+    .ecosystem-container {transform: scale(0.60); }
+    .ecosystem-intro-text h1 { font-size: 1.3rem; padding-bottom: 20px;}
     .ecosystem-intro-text p { font-size: 0.9rem; }
+    .cloud-icon-node{
+        width: 10rem;
+        height: 10rem;
+        
+    }
+    
+    .cloud-icon-node i {
+    font-size: 70px; /* Ícone da nuvem, ajustado para ser visível no novo tamanho */
+    color: var(--primary-blue);
+}
+
+
 .progress-counter {
     /* Remove o posicionamento antigo no topo/direita */
     top: auto;
@@ -457,7 +560,17 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     padding: 6px 12px;
     font-size: 0.8rem;
 }
-    .info-card { padding: 20px; }
+    .info-card { padding: 40px; max-width: 350px; }
+
+    .info-card h2{
+        margin: 16px;
+    }
+
+    .info-card h2>i{
+        position: absolute;
+        top: 1.3rem;
+        left: 1.3rem;
+    }
 }
 
 #line-niche.connected {

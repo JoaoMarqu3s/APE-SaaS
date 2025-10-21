@@ -19,6 +19,22 @@
     --font-body: 'Open Sans', sans-serif;
 }
 
+/* Seleciona a barra de rolagem inteira */
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra */
+}
+
+/* Seleciona a trilha da barra (o fundo) */
+::-webkit-scrollbar-track {
+  background: rgb(1, 20, 20); /* Cor da trilha */
+}
+
+/* Seleciona a alça (o polegar) que é arrastável */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue); /* Cor da alça */
+  border-radius: 6px; /* Arredonda os cantos da alça */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -1104,6 +1120,10 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     overflow: hidden;
     padding: 1rem 2rem 1rem 2rem;
     border-bottom: 1px solid var(--slate-800);
+}
+
+.section-title{
+    text-align: center;
 }
 
 .carousel-container {

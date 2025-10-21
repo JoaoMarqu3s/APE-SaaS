@@ -180,3 +180,31 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector(".carousel-container .slide").prepend(items[items.length - 1]);
         });
     }
+
+    // 2. Lógica para o Acordeão do FAQ
+    // ===================================
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Fecha todos os outros itens abertos
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            // Se o item clicado não estava ativo, abre ele
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+ // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();

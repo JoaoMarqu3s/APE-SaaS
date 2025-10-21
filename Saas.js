@@ -162,3 +162,21 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--mouse-y', `${y}px`);
         });
     });
+
+// ========================================================== //
+    // --- LÓGICA DO CARROSSEL DE SOLUÇÕES ---                    //
+    // ========================================================== //
+    const nextBtn = document.querySelector('.solutions-carousel-section .next');
+    const prevBtn = document.querySelector('.solutions-carousel-section .prev');
+
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener("click", () => {
+            let items = document.querySelectorAll(".carousel-container .item");
+            document.querySelector(".carousel-container .slide").appendChild(items[0]);
+        });
+
+        prevBtn.addEventListener("click", () => {
+            let items = document.querySelectorAll(".carousel-container .item");
+            document.querySelector(".carousel-container .slide").prepend(items[items.length - 1]);
+        });
+    }

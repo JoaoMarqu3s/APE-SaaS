@@ -228,7 +228,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     align-items: center;
     padding: 70px 20px 20px 20px;
     overflow: hidden;
-    background-color: #161b22;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
 }
 
 .ecosystem-intro-text {
@@ -433,6 +433,101 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 .energy-burst { position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; transform: translate(-50%, -50%) scale(0); opacity: 0; z-index: 1; }
 .ecosystem-container.all-connected .energy-burst { animation: burst-effect 0.8s ease-out forwards; }
 
+
+/* ========================================================== */
+/* --- 6. ANIMAÇÃO DE FUNDO DE ESTRELAS --- */
+/* ========================================================== */
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+/* Camada de estrelas pequenas (mais distantes e lentas) */
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+        1875px 1052px #FFF, 1572px 1459px #FFF, 801px 1378px #FFF, 459px 384px #FFF, 
+        1488px 439px #FFF, 1158px 133px #FFF, 1261px 1045px #FFF, 1259px 1335px #FFF, 
+        /* ... e muitas outras estrelas geradas aleatoriamente ... */
+        539px 1192px #FFF, 1154px 1113px #FFF, 140px 1832px #FFF, 1000px 1000px #FFF;
+    animation: animStar 150s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+#stars:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: inherit; /* Reutiliza as mesmas estrelas para um loop perfeito */
+}
+
+/* Camada de estrelas médias */
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 
+        1007px 1445px #FFF, 24px 1729px #FFF, 413px 456px #FFF, 1131px 1863px #FFF, 
+        /* ... etc ... */
+        1984px 132px #FFF, 1782px 1183px #FFF, 1511px 1134px #FFF, 838px 1137px #FFF;
+    animation: animStar 100s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+#stars2:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: inherit;
+}
+
+/* Camada de estrelas grandes (mais próximas e rápidas) */
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 
+        108px 1529px #FFF, 1969px 1383px #FFF, 1084px 81px #FFF, 1033px 1461px #FFF, 
+        /* ... etc ... */
+        1438px 1413px #FFF, 1189px 422px #FFF, 1073px 1785px #FFF;
+    animation: animStar 50s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+#stars3:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: inherit;
+}
 
 /* ========================================================== */
 /* --- 4. ACHIEVEMENT MESSAGE (NOVO) --- */
@@ -703,6 +798,9 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     .features-section {
         padding: 80px 15px;
     }
+    .feature-card{
+        margin: 0px 20px;
+    }
 }
 
 /* ========================================================== */
@@ -861,4 +959,183 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     .contact-section {
         padding: 80px 15px;
     }
+}
+
+/* ========================================================== */
+/* --- 6. SEÇÃO SOLUÇÕES (CARROSSEL TELA CHEIA) --- */
+/* ========================================================== */
+.solutions-carousel-section {
+    width: 100%;
+    height: 100vh; /* Ocupa a altura inteira da tela */
+    position: relative; /* Contexto para os botões */
+    overflow: hidden;
+    background-color: var(--slate-900);
+}
+
+.carousel-container {
+    /* O container agora ocupa toda a seção */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* Removemos as propriedades de caixa (max-width, max-height, box-shadow) */
+}
+
+.carousel-container .slide .item {
+    /* Ajustando o tamanho dos slides laterais */
+    width: 250px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Overlay mais escuro para melhor contraste do texto */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+/* Os dois primeiros slides preenchem a tela inteira */
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0; /* Sem bordas arredondadas no modo tela cheia */
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(1)::before,
+.slide .item:nth-child(2)::before {
+    border-radius: 0; /* Remove borda do overlay também */
+}
+
+/* Posição dos slides laterais na fila */
+.slide .item:nth-child(3) { left: 80%; }
+.slide .item:nth-child(4) { left: calc(80% + 270px); } /* Aumenta o espaçamento */
+.slide .item:nth-child(5) { left: calc(80% + 540px); }
+.slide .item:nth-child(n + 6) { left: calc(80% + 810px); opacity: 0; }
+
+/* Conteúdo de texto do slide ativo */
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Posiciona a partir da esquerda */
+    width: 40%;
+    max-width: 500px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    display: none;
+    z-index: 2;
+}
+
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .name {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Fonte maior */
+    font-weight: bold;
+    opacity: 0;
+    animation: animate-content 1s ease-in-out 1 forwards;
+}
+
+.content .des {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--slate-300);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: animate-content 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+    font-family: var(--font-heading);
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--slate-900);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s;
+    animation: animate-content 1s ease-in-out 0.6s 1 forwards;
+}
+
+.content button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+@keyframes animate-content {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+        filter: blur(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Botões de Navegação */
+.carousel-navigation {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 1rem;
+}
+
+.carousel-navigation button {
+    width: 50px; /* Botões maiores */
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #eee;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-navigation button:hover {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+/* Responsividade para o modo tela cheia */
+@media (max-width: 768px) {
+    .item .content {
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .slide .item:nth-child(3) { left: 90%; }
+    .slide .item:nth-child(n + 4) { left: 150%; opacity: 0; }
 }

@@ -84,7 +84,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     background-image: url(fundo.png); /* Certifique-se de que o caminho 'fundo.png' está correto */
     background-size: cover;
     background-position: center;
-    animation: pan-background 60s linear infinite alternate;
+    animation: pan-background 10s linear infinite alternate;
     z-index: 0;
     opacity: 0.8; /* Aumentado para 0.8 para torná-la mais visível, mas ainda semi-transparente */
 }
@@ -236,13 +236,13 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 
 .ecosystem-intro-text {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1100px;
     text-align: center;
     z-index: 5;
     color: #ffffff;
     margin-bottom: 1rem;
 }
-.ecosystem-intro-text h1 {padding-bottom: 40px; font-size: clamp(1.2rem, 3vw, 2.5rem); color: #ffffff; }
+.ecosystem-intro-text h1 {padding-top: 40px; padding-bottom: 25px; font-size: clamp(1.2rem, 3vw, 2rem); color: #ffffff; }
 .ecosystem-intro-text p {color: #CBD5E1; }
 
 .progress-counter {
@@ -278,8 +278,8 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 180px; /* Base size, 2.5x the 80px nodes */
-    height: 180px; /* Base size */
+    width: 160px; /* Base size, 2.5x the 80px nodes */
+    height: 160px; /* Base size */
     background-color: var(--white);
     border-radius: 50%;
     display: grid;
@@ -290,7 +290,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 }
 
 .cloud-icon-node i {
-    font-size: 80px; /* Ícone da nuvem, ajustado para ser visível no novo tamanho */
+    font-size: 70px; /* Ícone da nuvem, ajustado para ser visível no novo tamanho */
     color: var(--primary-blue);
 }
 
@@ -624,19 +624,31 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 @media (max-width: 810px) {
     .ecosystem-container { transform: scale(0.8); }
     .ecosystem-section { padding-top: 20px; }
+    .progress-counter {
+    /* Remove o posicionamento antigo no topo/direita */
+    top: auto;
+    right: auto;
+    /* Adiciona o novo posicionamento no canto inferior esquerdo */
+    bottom: 60px;
+    left: 50%px;
+
+    /* Mantém os ajustes de estilo */
+    padding: 6px 12px;
+    font-size: 0.8rem;
 }
-@media (max-width: 600px) {
+}
+@media (max-width: 500px) {
     .ecosystem-section { min-height: 400px; padding-top: 60px;}
     .energy-burst{
         width: 60px;
         height: 60px;
     }
-    .ecosystem-container {transform: scale(0.60); }
+    .ecosystem-container {transform: scale(0.60); margin-top: -105px; }
     .ecosystem-intro-text h1 { font-size: 1.3rem; padding-bottom: 20px;}
     .ecosystem-intro-text p { font-size: 0.9rem; }
     .cloud-icon-node{
-        width: 10rem;
-        height: 10rem;
+        width: 9rem;
+        height: 9rem;
         
     }
     
@@ -977,7 +989,6 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     align-items: center; /* Centraliza o conjunto na horizontal */
     gap: 3rem; /* Cria um espaço entre o título e o carrossel */
     overflow: hidden;
-    background-color: rgb(26, 26, 26);
     padding: 2rem;
     border-bottom: 1px solid var(--slate-800);
 }
@@ -1095,6 +1106,12 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     transform: scale(1.05);
 }
 
+.slide .item::before {
+        border-radius: 12px;
+        /* Aumenta a opacidade do overlay para melhorar contraste do texto */
+        background: rgba(27, 27, 27, 0.75); /* Antes era 0.4 */
+    }
+
 @keyframes animate-content {
     from {
         opacity: 0;
@@ -1134,3 +1151,34 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     background-color: var(--primary-blue);
     border-color: var(--primary-blue);
 }
+
+@media (max-width: 900px) {
+    .content{
+        margin-left: -60px;
+        margin-top: -30px;
+        max-width: 700px;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+    .content{
+        margin-left: -60px;
+        margin-top: -30px;
+        max-width: 140px;
+    }
+
+    .content .des{
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .content .name{
+        font-size: 1.4rem;
+        line-height: 30px;
+    }
+
+    
+}
+

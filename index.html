@@ -5,17 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APE - Softwares Personalizados</title>
-    <meta name="description"
-        content="Desbloqueie sua carreira tech com um portfólio profissional e orientação personalizada. Ajudo iniciantes e experientes a se destacarem no mercado de Análise e Ciência de Dados.">
-    <meta name="keywords"
-        content="portfólio, carreira tech, análise de dados, ciência de dados, iniciante, mentor, html, css, javascript, desenvolvimento web, linkedin, github, currículo, vagas tech">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <meta name="description" content="Desbloqueie sua carreira tech com um portfólio profissional e orientação personalizada. Ajudo iniciantes e experientes a se destacarem no mercado de Análise e Ciência de Dados.">
+    <meta name="keywords" content="portfólio, carreira tech, análise de dados, ciência de dados, iniciante, mentor, html, css, javascript, desenvolvimento web, linkedin, github, currículo, vagas tech">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="Saas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="Imagens/FAVICON_NOVO_APE.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -25,7 +23,7 @@
         <nav class="floating-nav">
             <div class="navbar-container">
                 <a href="#hero" class="navbar-logo-link">
-                    <img src="logoprata-removebg-preview.png" alt="Logo da Empresa" class="navbar-logo">
+                    <img src="Imagens/logoprata-removebg-preview.png" alt="Logo da Empresa" class="navbar-logo">
                 </a>
                 <ul class="nav-list">
                     <span class="nav-highlight" aria-hidden="true"></span>
@@ -45,8 +43,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#faq" class="nav-link" data-section="faq"><i
-                                class="fa-solid fa-circle-question"></i><span class="link-text">FAQ</span></a>
+                        <a href="#faq" class="nav-link" data-section="faq"><i class="fa-solid fa-circle-question"></i><span class="link-text">FAQ</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="#contato" class="nav-link btn-cta" data-section="contato">
@@ -66,14 +63,11 @@
     <main>
         <section id="hero" class="new-hero-section">
             <div class="new-hero-content">
-                <div class="hero-chip">
+                <div class="hero-chip" data-aos="fade-up">
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.5 0L8.58579 6.41421L15 7.5L8.58579 8.58579L7.5 15L6.41421 8.58579L0 7.5L6.41421 6.41421L7.5 0Z"
-                            fill="url(#paint0_linear_1_2)"></path>
+                        <path d="M7.5 0L8.58579 6.41421L15 7.5L8.58579 8.58579L7.5 15L6.41421 8.58579L0 7.5L6.41421 6.41421L7.5 0Z" fill="url(#paint0_linear_1_2)"></path>
                         <defs>
-                            <linearGradient id="paint0_linear_1_2" x1="7.5" y1="0" x2="7.5" y2="15"
-                                gradientUnits="userSpaceOnUse">
+                            <linearGradient id="paint0_linear_1_2" x1="7.5" y1="0" x2="7.5" y2="15" gradientUnits="userSpaceOnUse">
                                 <stop stop-color="#A5B4FC"></stop>
                                 <stop offset="1" stop-color="#6366F1"></stop>
                             </linearGradient>
@@ -81,14 +75,14 @@
                     </svg>
                     <span>Transforme seu negócio com IA</span>
                 </div>
-                <h1>Potencialize seu negócio com <span class="highlight-blue">Automação Inteligente</span></h1>
-                <p class="hero-subtitle">Automatize processos, escale seu negócio e conquiste resultados extraordinários
-                    com nossas soluções.</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn-primary-new">Começar Gratuitamente &rarr;</a>
-                    <a href="#" class="btn-secondary-new">Ver Demonstração</a>
+                <h1 data-aos="fade-up" data-aos-delay="100">Potencialize seu negócio com <span class="highlight-blue">Automação Inteligente</span></h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Automatize processos, escale seu negócio e conquiste resultados extraordinários com nossas soluções.</p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://wa.me/5511953005673?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20suas%20solu%C3%A7%C3%B5es%20de%20automa%C3%A7%C3%A3o.%20Podemos%20conversar?" class="btn-primary-new" target="_blank">Comece a Automatizar &rarr;</a>
+                    <a href="#solucoes" class="btn-secondary-new">Ver Demonstração</a>
                 </div>
             </div>
+            <img class="tango-inicio" data-aos="fade-in" data-aos-delay="400" src="Imagens/tango-inicio.png" alt="">
         </section>
 
         <section id="ecosystem" class="ecosystem-section">
@@ -97,20 +91,13 @@
             <div id="stars3"></div>
             <div class="ecosystem-intro-text">
                 <h1>Quer Entender Como a Automação Se Encaixa Na Sua Rotina?</h1>
-                <p>Construa um ambiente completo com SaaS! <br> Toque nos ícones e veja como cada solução se conecta à
-                    nuvem.</p>
+                <p>Construa um ambiente completo com SaaS! <br> Toque nos ícones e veja como cada solução se conecta à nuvem.</p>
             </div>
             <div class="progress-counter">0 de 5 áreas conectadas</div>
             <div class="ecosystem-container">
-                <div class="cloud-icon-node">
-                    <i class="fa-solid fa-cloud"></i>
-                </div>
+                <div class="cloud-icon-node"><i class="fa-solid fa-cloud"></i></div>
                 <svg class="connection-lines" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
-                    <defs>
-                        <filter id="yellow-glow">
-                            <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#ffc107" flood-opacity="0.7" />
-                        </filter>
-                    </defs>
+                    <defs><filter id="yellow-glow"><feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#ffc107" flood-opacity="0.7" /></filter></defs>
                     <path id="line-gestao" d="M 140 220 C 140 280, 250 320, 390 295" />
                     <path id="line-financas" d="M 220 500 C 300 500, 350 420, 390 315" />
                     <path id="line-marketing" d="M 580 500 C 500 500, 450 420, 410 315" />
@@ -118,35 +105,28 @@
                     <path id="line-niche" d="M 400 80 C 400 130, 400 230, 400 280" />
                 </svg>
                 <div class="service-node" id="node-gestao" data-target="gestao"><i class="fa-solid fa-gears"></i></div>
-                <div class="service-node" id="node-financas" data-target="financas"><i
-                        class="fa-solid fa-hand-holding-dollar"></i></div>
-                <div class="service-node" id="node-marketing" data-target="marketing"><i
-                        class="fa-solid fa-bullhorn"></i></div>
-                <div class="service-node" id="node-niche" data-target="niche"><i class="fa-solid fa-puzzle-piece"></i>
-                </div>
-                <div class="service-node" id="node-educacao" data-target="educacao"><i
-                        class="fa-solid fa-book-open-reader"></i></div>
+                <div class="service-node" id="node-financas" data-target="financas"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <div class="service-node" id="node-marketing" data-target="marketing"><i class="fa-solid fa-bullhorn"></i></div>
+                <div class="service-node" id="node-niche" data-target="niche"><i class="fa-solid fa-puzzle-piece"></i></div>
+                <div class="service-node" id="node-educacao" data-target="educacao"><i class="fa-solid fa-book-open-reader"></i></div>
                 <div class="energy-burst"></div>
             </div>
             <div id="card-gestao" class="info-card">
                 <button class="close-btn">&times;</button>
                 <h2><i class="fa-solid fa-gears"></i> Gestão & Produtividade</h2>
-                <p>Otimize processos, melhore a colaboração e aumente a eficiência da sua equipe com ferramentas
-                    projetadas para o sucesso.</p>
+                <p>Otimize processos, melhore a colaboração e aumente a eficiência da sua equipe com ferramentas projetadas para o sucesso.</p>
                 <span>Exemplos: Asana, Trello, Slack.</span>
             </div>
             <div id="card-financas" class="info-card">
                 <button class="close-btn">&times;</button>
                 <h2><i class="fa-solid fa-hand-holding-dollar"></i> Finanças & Negócios</h2>
-                <p>Controle suas finanças, gerencie faturamento e obtenha insights valiosos para a tomada de decisões
-                    estratégicas.</p>
+                <p>Controle suas finanças, gerencie faturamento e obtenha insights valiosos para a tomada de decisões estratégicas.</p>
                 <span>Exemplos: QuickBooks, ContaAzul, Stripe.</span>
             </div>
             <div id="card-marketing" class="info-card">
                 <button class="close-btn">&times;</button>
                 <h2><i class="fa-solid fa-bullhorn"></i> Marketing & Vendas</h2>
-                <p>Automatize campanhas, gerencie o relacionamento com clientes (CRM) e impulsione suas vendas com as
-                    melhores plataformas do mercado.</p>
+                <p>Automatize campanhas, gerencie o relacionamento com clientes (CRM) e impulsione suas vendas com as melhores plataformas do mercado.</p>
                 <span>Exemplos: HubSpot, Salesforce, RD Station.</span>
             </div>
             <div id="card-educacao" class="info-card">
@@ -158,49 +138,43 @@
             <div id="card-niche" class="info-card">
                 <button class="close-btn">&times;</button>
                 <h2><i class="fa-solid fa-puzzle-piece"></i> Niche SaaS</h2>
-                <p>Soluções altamente especializadas, desenvolvidas para atender às demandas únicas de mercados
-                    específicos com precisão.</p>
+                <p>Soluções altamente especializadas, desenvolvidas para atender às demandas únicas de mercados específicos com precisão.</p>
                 <span>Exemplos: Software para academias, gestão de escritórios de advocacia.</span>
             </div>
+            <img class="tango-astronauta" src="Imagens/tango-astronauta.png" alt="">
             <div id="overlay"></div>
         </section>
+
         <section id="solucoes" class="solutions-carousel-section">
-            <h2 class="section-title">Soluções que <span class="highlight-blue">Trabalham por Você</span></h2>
-            <div class="carousel-container">
+            <h2 class="section-title" data-aos="fade-up">Soluções que <span class="highlight-blue">Trabalham por Você</span></h2>
+            <p class="carousel-p" data-aos="fade-up" data-aos-delay="100">Adaptáveis a qualquer tipo de negócio.</p>
+            <div class="carousel-container" data-aos="fade-up" data-aos-delay="200">
                 <div class="slide">
-                    <div class="item" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop');
-                        ">
+                    <div class="item" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop');">
                         <div class="content">
                             <div class="name">Websites & Portfólios</div>
-                            <div class="des">Criamos vitrines digitais de alto impacto que capturam a essência da sua
-                                marca e atraem clientes.</div>
+                            <div class="des">Criamos vitrines digitais de alto impacto que capturam a essência da sua marca e atraem clientes.</div>
                             <button>Saiba Mais</button>
                         </div>
                     </div>
-                    <div class="item"
-                        style="background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="item" style="background-image: url('Imagens/gymflow.png');">
                         <div class="content">
-                            <div class="name">Automação de Processos</div>
-                            <div class="des">Implementamos robôs e fluxos de trabalho que eliminam tarefas repetitivas e
-                                aumentam a produtividade da sua equipe.</div>
+                            <div class="name">Sistema de gestão para academias</div>
+                            <div class="des">Organize cadastros, planos e vencimentos com praticidade e segurança.</div>
                             <button>Saiba Mais</button>
                         </div>
                     </div>
-                    <div class="item"
-                        style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="item" style="background-image: url('Imagens/traducao.png');">
                         <div class="content">
-                            <div class="name">Análise de Dados</div>
-                            <div class="des">Transformamos seus dados brutos em dashboards interativos e insights
-                                acionáveis para decisões mais inteligentes.</div>
+                            <div class="name">Tradução de Dados</div>
+                            <div class="des">Ferramenta web que automatiza a tradução e conversão de datasets, permitindo upload, processamento e download em múltiplos formatos com agilidade e precisão.</div>
                             <button>Saiba Mais</button>
                         </div>
                     </div>
-                    <div class="item"
-                        style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop');">
+                    <div class="item" style="background-image: url('Imagens/gerador-relatorios.png');">
                         <div class="content">
-                            <div class="name">Sistemas de Gestão</div>
-                            <div class="des">Desenvolvemos sistemas sob medida para gerenciar clientes, projetos e
-                                operações de forma centralizada e eficiente.</div>
+                            <div class="name">Relatórios de pedidos</div>
+                            <div class="des">Uma ferramenta inteligente que permite selecionar produtos, gerando automaticamente relatórios detalhados e agilizando pedidos que antes eram feitos manualmente.</div>
                             <button>Saiba Mais</button>
                         </div>
                     </div>
@@ -211,28 +185,28 @@
                 </div>
             </div>
         </section>
+
         <section id="recursos" class="features-section">
             <div class="features-content">
-                <h2 class="section-title">Recursos de <span class="highlight-blue">Crescimento e Automação</span></h2>
-                <p class="section-subtitle">Tudo que você precisa para construir, escalar e gerenciar aplicações
-                    modernas</p>
+                <h2 class="section-title" data-aos="fade-up">Recursos de <span class="highlight-blue">Crescimento e Automação</span></h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Tudo que você precisa para construir, escalar e gerenciar aplicações modernas</p>
                 <div class="features-grid">
-                    <article class="feature-card">
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
                         <h3>Automação Inteligente</h3>
                         <p>Reduza tarefas manuais com fluxos automatizados e gatilhos inteligentes baseados em IA.</p>
                     </article>
-                    <article class="feature-card">
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
                         <h3>Escalabilidade Sob Demanda</h3>
                         <p>Aumente recursos conforme o uso — sem interrupções, sem complexidade.</p>
                     </article>
-                    <article class="feature-card">
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="card-icon"><i class="fa-solid fa-chart-pie"></i></div>
                         <h3>Relatórios e Insights</h3>
                         <p>Visualize dados e resultados com dashboards personalizados e relatórios dinâmicos.</p>
                     </article>
-                    <article class="feature-card">
+                    <article class="feature-card" data-aos="fade-up" data-aos-delay="500">
                         <div class="card-icon"><i class="fa-solid fa-users-gear"></i></div>
                         <h3>Multiusuário e Permissões</h3>
                         <p>Controle o acesso da sua equipe com diferentes níveis de permissão e perfis de uso.</p>
@@ -240,104 +214,37 @@
                 </div>
             </div>
         </section>
-        <section id="faq" class="faq-section">
-            <div class="container">
-                <div class="section-intro" data-aos="fade-up">
-                    <h2>Encontre respostas rápidas</h2>
-                    <p>Tudo o que você precisa saber antes de dar o próximo passo. Se sua dúvida persistir, não hesite
-                        em nos contatar diretamente.</p>
-                </div>
 
+        <section id="faq" class="faq-section">
+            <div class="container" data-aos="fade-up">
+                <div class="section-intro">
+                    <h2>Encontre respostas rápidas</h2>
+                    <p>Tudo o que você precisa saber antes de dar o próximo passo. Se sua dúvida persistir, não hesite em nos contatar diretamente.</p>
+                </div>
                 <div class="faq-accordion">
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                        <button class="faq-question">
-                            <span>Para quem são esses serviços?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Para qualquer profissional que deseja se destacar. Atendemos desde <strong>estudantes e
-                                    profissionais em transição de carreira</strong> na área de tecnologia até
-                                <strong>empreendedores, freelancers e especialistas de outras áreas</strong> que
-                                precisam de uma presença digital (site ou portfólio) para atrair clientes e
-                                oportunidades.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
-                        <button class="faq-question">
-                            <span>Qual é o prazo de entrega dos projetos?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>O prazo varia com o pacote:<br>
-                                • <strong>Análise Expressa:</strong> Até 1 semana.<br>
-                                • <strong>Pacote Básico (Otimização):</strong> Até 2 semanas.<br>
-                                • <strong>Pacote Completo (Portfólio Web):</strong> Aprox. 3 semanas, com entregas
-                                parciais para sua revisão e aprovação.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                        <button class="faq-question">
-                            <span>Preciso já ter projetos para criar um portfólio?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Não é um pré-requisito! Se você está começando, podemos estruturar seu portfólio para
-                                destacar suas <strong>habilidades, conhecimentos e potencial</strong>. Damos as
-                                orientações para que você possa adicionar futuros projetos e evoluir sua vitrine
-                                profissional continuamente.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
-                        <button class="faq-question">
-                            <span>Como funciona a política de pagamento?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Para projetos de criação (Pacote Completo e Web Customizado), solicitamos <strong>50% de
-                                    adiantamento</strong> para iniciar e o restante na entrega, após sua aprovação
-                                final. Para os demais pacotes, o pagamento é integral e antecipado. Nossa política de
-                                reembolso parcial (detalhada em contrato) garante <strong>total transparência e
-                                    segurança</strong> em sua decisão.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                        <button class="faq-question">
-                            <span>Vocês criam outros tipos de sites além de portfólios?</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p><strong>Sim!</strong> Nossa expertise nos permite desenvolver uma vasta gama de projetos
-                                web, incluindo: <strong>sites institucionais</strong> completos para empresas,
-                                <strong>landing pages</strong> para campanhas, <strong>blogs personalizados</strong>, e
-                                outras soluções customizadas. Se você tem uma ideia, nós podemos construir.
-                            </p>
-                        </div>
-                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="100"><button class="faq-question"><span>O que é um sistema SaaS?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>SaaS (Software as a Service) é um modelo em que o software é <strong>acessado pela internet , sem precisar de instalação.</strong> Você usa tudo direto do navegador, com atualizações automáticas e suporte em nuvem.</p></div></div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="150"><button class="faq-question"><span>Como a automação pode ajudar meu negócio?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p> A <strong>automação</strong> elimina tarefas repetitivas e manuais, permitindo que sua equipe foque no que realmente importa. Ela <strong>reduz erros</strong>, <strong>economiza tempo</strong> e <strong>aumenta a produtividade</strong> de forma escalável.</p></div></div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200"><button class="faq-question"><span>Preciso ter conhecimento técnico para usar suas soluções?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p><strong>Não!</strong> Nossas ferramentas são desenvolvidas para serem <strong>intuitivas e fáceis de usar</strong>. Mesmo sem experiência técnica, você consegue <strong>operar e extrair valor rapidamente</strong>.</p></div></div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="250"><button class="faq-question"><span>É seguro usar um sistema baseado em nuvem?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Sim. Utilizamos <strong>protocolos avançados de segurança</strong>, <strong>criptografia</strong> e <strong>backups automáticos</strong> para garantir a <strong>proteção dos seus dados 24 horas por dia</strong>.</p></div></div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300"><button class="faq-question"><span>Como sei se o SaaS é a escolha certa para minha empresa?</span><i class="fas fa-chevron-down"></i></button><div class="faq-answer"><p>Se você quer <strong>reduzir custos com infraestrutura</strong>, ter <strong>acesso remoto</strong> e <strong>escalar seu negócio com agilidade</strong>, o modelo SaaS é ideal. Ele se adapta tanto a pequenas empresas quanto a grandes organizações.</p></div></div>
                 </div>
             </div>
-                  
         </section>
+
         <section id="contato" class="contact-section">
-            <div class="contact-header">
-                <h2 class="section-title">Deseja impulsionar seus resultados com <span
-                        class="highlight-blue">Inovação?</span></h2>
+            <div class="contact-header" data-aos="fade-up">
+                <h2 class="section-title">Deseja impulsionar seus resultados com <span class="highlight-blue">Inovação?</span></h2>
                 <div class="title-decorator"></div>
-                <p class="section-subtitle">Preencha o formulário abaixo e fale com nossa equipe. Estamos prontos para
-                    entender suas necessidades e mostrar como nossas soluções podem levar sua empresa a um novo patamar
-                    de eficiência e inovação.</p>
+                <p class="section-subtitle">Preencha o formulário abaixo e fale com nossa equipe. Estamos prontos para entender suas necessidades e mostrar como nossas soluções podem levar sua empresa a um novo patamar de eficiência e inovação.</p>
             </div>
-            <div class="contact-box">
+            <div class="contact-box" data-aos="fade-up" data-aos-delay="200">
                 <div class="contact-channels">
                     <h3>Canais Rápidos</h3>
                     <p>Prefere uma conversa mais ágil? Nos envie uma mensagem.</p>
                     <ul class="channel-list">
-                        <li><a href="https://wa.me/SEUNUMERO" target="_blank"><i
-                                    class="fa-brands fa-whatsapp"></i><span>Nosso WhatsApp</span></a></li>
-                        <li><a href="mailto:gerencia.apetech@gmail.com"><i
-                                    class="fa-solid fa-envelope"></i><span>gerencia.apetech@gmail.com</span></a></li>
-                        <li><a href="https://linkedin.com/in/SEU-PERFIL" target="_blank"><i
-                                    class="fa-brands fa-linkedin"></i><span>Siga-nos no LinkedIn</span></a></li>
+                        <li><a href="https://wa.me/5511953005673?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20suas%20solu%C3%A7%C3%B5es%20de%20automa%C3%A7%C3%A3o.%20Podemos%20conversar?" target="_blank"><i class="fa-brands fa-whatsapp"></i><span>Nosso WhatsApp</span></a></li>
+                        <li><a href="mailto:gerencia.apetech@gmail.com"><i class="fa-solid fa-envelope"></i><span>gerencia.apetech@gmail.com</span></a></li>
+                        <li><a href="https://www.linkedin.com/company/apetechnology/" target="_blank"><i class="fa-brands fa-linkedin"></i><span>Siga-nos no LinkedIn</span></a></li>
                     </ul>
                     <a href="#nossas-solucoes" class="solutions-link">Conheça nossas outras soluções &rarr;</a>
                 </div>
@@ -349,39 +256,28 @@
                             <input type="text" name="company" placeholder="Nome da Empresa">
                         </div>
                         <input type="email" name="email" placeholder="Seu E-mail Profissional" required>
-                        <textarea name="message" rows="5" placeholder="Conte-nos um pouco sobre seu desafio..."
-                            required></textarea>
+                        <textarea name="message" rows="5" placeholder="Conte-nos um pouco sobre seu desafio..." required></textarea>
                         <button type="submit" class="btn-submit">Enviar Mensagem</button>
                     </form>
                 </div>
             </div>
         </section>
-        <footer class="footer">
-            <!-- Decorative gradient overlay -->
-            <div class="footer-overlay"></div>
 
+        <footer class="footer">
+            <div class="footer-overlay"></div>
             <div class="footer-container">
                 <div class="footer-content">
-                    <!-- Logo -->
                     <div class="logo-wrapper">
                         <div class="logo-glow"></div>
-                        <div class="logo-box">
-                            <img src="logoprata-removebg-preview.png" alt="" width="90px">
-                        </div>
+                        <div class="logo-box"><img src="Imagens/logoprata-removebg-preview.png" alt="" width="90px"></div>
                     </div>
                     <div class="copyright">
                         <div class="copyright-line"></div>
-                        <p class="copyright-text">
-                            &copy; <span id="year"></span> <span class="company-name">APE</span>
-                        </p>
-                        <p class="copyright-subtext">
-                            Todos os direitos reservados.
-                        </p>
+                        <p class="copyright-text">&copy; <span id="year"></span> <span class="company-name">APE</span></p>
+                        <p class="copyright-subtext">Todos os direitos reservados.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Background decorative elements -->
             <div class="bg-decoration bg-decoration-left"></div>
             <div class="bg-decoration bg-decoration-right"></div>
         </footer>
@@ -398,8 +294,8 @@
             </div>
         </div>
     </div>
-
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="Saas.js"></script>
 </body>
-
 </html>

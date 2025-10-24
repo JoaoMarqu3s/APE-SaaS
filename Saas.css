@@ -81,7 +81,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     height: 100vh;
     min-height: 700px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     padding: 2rem;
@@ -97,7 +97,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     left: -10%;
     width: 120%;
     height: 120%;
-    background-image: url(fundo.png); /* Certifique-se de que o caminho 'fundo.png' está correto */
+    background-image: url(Imagens/fundo.png); /* Certifique-se de que o caminho 'fundo.png' está correto */
     background-size: cover;
     background-position: center;
     animation: pan-background 10s linear infinite alternate;
@@ -134,12 +134,12 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 
 .new-hero-content h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2.5rem, 6vw, 3rem);
     font-weight: 700;
     color: var(--white);
     letter-spacing: -0.02em;
     line-height: 1.1;
-    max-width: 800px;
+    max-width: 600px;
 }
 
 .highlight-blue {
@@ -168,6 +168,34 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+}
+
+.tango-inicio{
+    z-index: 1000;
+    opacity: 1;
+    width: 32rem;
+}
+
+@media(max-width: 1050px){
+    .new-hero-section{
+        flex-direction: column;
+        padding-top: 3rem;
+    }
+
+    .tango-inicio{
+        width: 22rem;
+    }
+}
+
+@media(max-width: 660px){
+    .new-hero-section{
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
+    .tango-inicio{
+        width: 15rem;
+    }
 }
 
 .btn-primary-new {
@@ -294,8 +322,8 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 160px; /* Base size, 2.5x the 80px nodes */
-    height: 160px; /* Base size */
+    width: 140px; /* Base size, 2.5x the 80px nodes */
+    height: 140px; /* Base size */
     background-color: var(--white);
     border-radius: 50%;
     display: grid;
@@ -306,7 +334,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 }
 
 .cloud-icon-node i {
-    font-size: 70px; /* Ícone da nuvem, ajustado para ser visível no novo tamanho */
+    font-size: 60px; /* Ícone da nuvem, ajustado para ser visível no novo tamanho */
     color: var(--primary-blue);
 }
 
@@ -322,8 +350,8 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 }
 .service-node {
     position: absolute;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     background-color: var(--white);
     border-radius: 50%;
     display: grid;
@@ -334,7 +362,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .service-node:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5); }
-.service-node i { font-size: 40px; color: #6366F1; }
+.service-node i { font-size: 30px; color: #6366F1; }
 
 /* Posicionamento dos nós */
 #node-niche { top: 40px; left: 360px; }
@@ -437,6 +465,20 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 .close-btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--white);
+}
+
+.tango-astronauta{
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    width: 23rem;
+}
+
+@media(max-width: 1080px){
+    .tango-astronauta{
+        width: 12rem;
+        left: -30px;
+    }
 }
 
 #overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 59, 92, 0.6); z-index: 10; opacity: 0; pointer-events: none; transition: opacity 0.5s ease; }
@@ -659,7 +701,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
         width: 60px;
         height: 60px;
     }
-    .ecosystem-container {transform: scale(0.60); margin-top: -105px; }
+    .ecosystem-container {transform: scale(0.57); margin-top: -105px; }
     .ecosystem-intro-text h1 { font-size: 1.3rem; padding-bottom: 20px;}
     .ecosystem-intro-text p { font-size: 0.9rem; }
     .cloud-icon-node{
@@ -1116,7 +1158,6 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     flex-direction: column; /* Empilha os itens (título e carrossel) */
     justify-content: center; /* Centraliza o conjunto na vertical */
     align-items: center; /* Centraliza o conjunto na horizontal */
-    gap: 3rem; /* Cria um espaço entre o título e o carrossel */
     overflow: hidden;
     padding: 1rem 2rem 1rem 2rem;
     border-bottom: 1px solid var(--slate-800);
@@ -1124,6 +1165,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
 
 .section-title{
     text-align: center;
+
 }
 
 .carousel-container {
@@ -1147,6 +1189,10 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     background-size: cover;
     display: inline-block;
     transition: 0.5s;
+}
+
+.carousel-p{
+    margin-bottom: 2rem;
 }
 
 .slide .item::before {
@@ -1209,6 +1255,7 @@ span.link-text { font-weight: bold; font-size: 10pt; }
     font-weight: bold;
     opacity: 0;
     animation: animate-content 1s ease-in-out 1 forwards;
+    line-height: 1.2;
 }
 
 .content .des {
@@ -1438,3 +1485,4 @@ span.link-text { font-weight: bold; font-size: 10pt; }
         padding: 0.625rem;
     }
 }
+
